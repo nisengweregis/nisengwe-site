@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% block page_content %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #FF9F55;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+hr {
+  border-top: 1px solid white;
+}
+</style>
+</head>
+<body>
+
+<div class="container mt-3 mb-3">
+	<div class="row">
+		<div class="col-md-8 offset-md-2">
+            <h8 style="color:#FFFFFF"> <i> Jour après jour, le poids de nos parcours s'alourdit. Respect à tous ceux qui contribuent à alléger la souffrance et essuyer la sueur de projets non-accomplis!</i></h8><br>
+            <br>
+            <h5 style="color:#FFFFFF">Professional experience</h5>
+			<ul class="timeline">
+				<li>
+					<a style="color:#FF9F55">Graduate Research Assistant, University of Tennessee</a>
+					<a style="color:#FF9F55" href="#" class="float-right">May, 2019</a>
+					<p style="color:#FFFFFF">I am currently working with the Smith Center for International Agriculture as a graduate research assistant. My particular interest is to use data science techniques to answer questions related to natural resources in the Rwanda-based food security project</p>
+				</li>
+				<li>
+					<a style="color:#FF9F55">National Consultant (Natural Resources), Indufor</a>
+					<a style="color:#FF9F55" href="#" class="float-right">January, 2018</a>
+					<p style="color:#FFFFFF">As a consultant, I was working on the IFC-supported "Natural Capital" project with Indufor. That project aimed at analyzing the dependencies and impacts of the beverage industry in Rwanda on natural capital. Indufor is an independent international consulting company based in Finland that provides advisory services to a wide range of private and public sector clients in forestry, forest industry and sustainable natural resource management. As a national consultant, I was in charge of coordinating the program and facilitating the activities carried out in Rwanda.</p>
+				</li>
+				<li>
+					<a style="color:#FF9F55">Program Associate, One Acre Fund, Rwanda</a>
+					<a style="color:#FF9F55" href="#" class="float-right">May, 2016</a>
+					<p style="color:#FFFFFF">Farming is the dominant economic activity of the world’s poor. One Acre Fund (OAF) makes that activity significantly more productive. OAF's services include financing for farm inputs, distribution of seed and fertilizer, training on agricultural techniques, and market facilitation to maximize profits from harvest sales. As program associate, my project portfolio included farmer protection and team development.</p>
+				</li>
+			</ul>
+            <h5 style="color:#FFFFFF">Academic experience</h5>
+            <ul class="timeline">
+				<li>
+					<a style="color:#FF9F55">Ph.D., Natural Resources, University of Tennessee</a>
+					<a style="color:#FF9F55" href="#" class="float-right">Ongoing ...</a>
+					<p style="color:#FFFFFF">I am interested in looking at the environment, natural resources, and sustainability and how they relate to poverty alleviation and food security in developing countries. More particularly, I am interested in understanding and predicting human behaviors towards natural resources and the environment. To do this, I heavily rely on modern data science techniques such as deep learning</p>
+				</li>
+				<li>
+					<a style="color:#FF9F55">MSc, Natural Resources and Environment, Michigan State University</a>
+					<a style="color:#FF9F55" href="#" class="float-right">May, 2016</a>
+					<p style="color:#FFFFFF">From hard-core science, I moved to management and policy science of the natural resources and environment spectrum. On this end, my interest revolved around climate change and human dimensions. Particularly, I was interested in understanding how farmers in Nyabihu district (northern Rwanda) cope with climate-change-induced extreme events, by understanding their risk perceptions and attitudes. This constituted the basis for my thesis that I successfully completed with invaluable help from my main professor, Dr. John Kerr. I remain indebted to him.</p>
+				</li>
+				<li>
+					<a style="color:#FF9F55">BSc, Environmental Chemistry, University of Rwanda</a>
+					<a style="color:#FF9F55" class="float-right">February, 2012</a>
+					<p style="color:#FFFFFF">I focused on finding innovative chemical solutions to respond to environmental issues. In particular, my final-year project aimed at addressing pollution based on polystyrene waste. My classmate and I, with help from our professor, we successfully produced varnish from polystryrene-based waste, thus reducing this waste in nature and then producing useful product out of it.</p>
+				</li>
+			</ul>
+            <h5 style="color:#FFFFFF">Any skills?</h5>
+             <h6 style="color:#FFFFFF">Programming and Data analysis</h6>
+            <ul class="timeline">
+				<li>
+					<a style="color:#FF9F55">Programming</a>
+					<p style="color:#FFFFFF">Python</p>
+				</li>
+                <li>
+					<a style="color:#FF9F55">Web development</a>
+					<p style="color:#FFFFFF">Python (Django); HTML; CSS; JS</p>
+				</li>
+                <li>
+					<a style="color:#FF9F55">Data management</a>
+					<p style="color:#FFFFFF">MySQL</p>
+				</li>
+                <li>
+					<a style="color:#FF9F55">Data science</a>
+					<p style="color:#FFFFFF">Machine learning; deep learning (Python: Scikit-learn, TensorFlow)</p>
+				</li>
+                <li>
+					<a style="color:#FF9F55">Data analysis and wrangling</a>
+					<p style="color:#FFFFFF"> Python (Pandas, Numpy) </p>
+				</li>
+				<li>
+					<a style="color:#FF9F55">Data visualization</a>
+					<p style="color:#FFFFFF"> Tableau, Python (Seaborn, Matplotlib) </p>
+				</li>
+				<li>
+					<a style="color:#FF9F55">Geographical information technology and science</a>
+					<p style="color:#FFFFFF">GIS (arcGIS); Geospatial analysis [(GeoDa), Python (Geopandas)]</p>
+				</li>
+			</ul>
+            <h6 style="color:#FFFFFF">Communication</h6>
+            <ul class="timeline">
+				<li>
+					<a style="color:#FF9F55">Languages</a>
+					<p style="color:#FFFFFF">I am proficient in English; Je suis comfortable en français; Ikinyarwanda ni cyo navukiyemo; Yo estoy aprendiendo español.</p>
+				</li>
+                <li>
+					<a style="color:#FF9F55">Presentation and public speaking</a>
+					<p style="color:#FFFFFF">Still working on it. </p>
+				</li>
+
+			</ul>
+            <h6 style="color:#FFFFFF">Scholarships, Fellowships, and Awards</h6>
+            <ul class="timeline">
+                <li>
+					<a style="color:#FF9F55">George and Nancy Axinn Scholarship Award for International Development</a>
+                    <a style="color:#FF9F55" href="#" class="float-right">2015</a>
+					<p style="color:#FFFFFF">Awarded to the student who has demonstrated interest and practical involvement in international development in the department of Community Sustainability at Michigan State University. </p>
+				</li>
+				<li>
+					<a style="color:#FF9F55">MasterCard Scholarship</a>
+                    <a style="color:#FF9F55" href="#" class="float-right">2014</a>
+					<p style="color:#FFFFFF">The MasterCard Foundation in partnership with Michigan State University provides full tuition scholarships to undergraduate and masters students from Sub-Saharan Africa who have demonstrated academic talent, are economically disadvantaged and have a personal commitment to give back to their countries. I was blessed to be part of the 2014 cohort of scholars.</p>
+				</li>
+                <li>
+					<a style="color:#FF9F55"> KIST Excellent Performance Award</a>
+                    <a style="color:#FF9F55" href="#" class="float-right">2012</a>
+					<p style="color:#FFFFFF">Award of excellent performance offered students with the best innovative research project) by Kigali Institute of Science and Technology. My classmate and I won that award. </p>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+<p class="text-muted mt-5 mb-5 text-center small">by: Regis Nisengwe </p>
+</body>
+</html>
+{% endblock %}

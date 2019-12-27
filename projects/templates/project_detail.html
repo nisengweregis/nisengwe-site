@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block page_content %}
+<!DOCTYPE html>
+<div>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+hr {
+  border-top: 1px solid white;
+}
+
+</style>
+</head>
+<body>
+<div class="container mt-5 mb-5">
+<h1 style="color:#FF9F55">{{ project.title }}</h1>
+<div class="row">
+    <div class="col-md-4">
+        <img src="{{project.image_url}}" alt="" width="100%">
+    </div>
+    <div class="col-md-6">
+        <h5 style="color:#FF9F55">About the project:</h5>
+        <p style="color:#FFFFFF">{{ project.description }}</p>
+        <br>
+    </div>
+
+</div>
+</body>
+<p class="text-muted mt-5 mb-5 text-center small">by: Regis Nisengwe </p>
+</div>
+</html>
+{% endblock %}

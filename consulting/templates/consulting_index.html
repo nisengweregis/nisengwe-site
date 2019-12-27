@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block page_content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #FF9F55;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+hr {
+  border-top: 1px solid white;
+}
+h5 {
+  padding: 5px;
+}
+img{
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+</head>
+<body>
+<div class="container mt-5 mb-3">
+
+    <div class="row">
+        {% for consulting in consultings %}
+        <div class="col-md-5">
+            <div class="card mb-2">
+                <img class="card-img-top" src="{{consulting.image_url}}" >
+                <div class="card-body">
+                    <h5 class="card-title">{{ consulting.title }}</h5>
+                    <p class="card-text"> {{ consulting.description | slice:":280"}}...</p>
+                    <a href="{% url 'consulting_detail' consulting.pk %}"
+                       class="btn btn-primary">
+                        More about that here
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<p class="text-muted mt-5 mb-5 text-center small">by: Regis Nisengwe </p>
+</body>
+</html>
+
+{% endblock %}
+
