@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block page_content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+hr {
+  border-top: 1px solid white;
+}
+
+    </style>
+</head>
+<body>
+<div class="container mt-5 mb-5">
+    <h3 style="color:#FFFFFF">I am listening. Response guaranteed!</h3>
+    <hr>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Hit me!</button>
+        </div>
+    </form>
+</body>
+
+<p class="text-muted mt-5 mb-5 text-center small">by: Regis Nisengwe </p>
+
+</div>
+
+</html>
+{% endblock %}
