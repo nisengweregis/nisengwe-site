@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block page_content %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+hr {
+  border-top: 1px solid white;
+}
+
+p    {color: white;}
+}
+
+</style>
+</head>
+<body>
+<div class="col-md-8 offset-md-2">
+    <h1 style="color:#FFFFFF">{{ category | title }}</h1>
+    <hr>
+    {% for post in posts %}
+        <h2><a style="color:#FF9F55" href="{% url 'opportunities_detail' post.pk%}">{{ post.title }}</a></h2>
+        <small style="color:#FFFFFF">
+            {{ post.created_on.date }} |&nbsp;
+            Categories:&nbsp;
+            {% for category in post.categories.all %}
+            <a style="color:#FFFFFF" href="{% url 'opportunities_category' category.name %}">
+                {{ category.name }}
+            </a>&nbsp;
+            {% endfor %}
+        </small>
+        <p style="color:#FFFFFF">{{ post.body | slice:":400" }}...</p>
+    {% endfor %}
+</div>
+</body>
+<p class="text-muted mt-5 mb-5 text-center small">by: Regis Nisengwe </p>
+</html>
+{% endblock %}
